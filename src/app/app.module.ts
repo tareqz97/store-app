@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
+// import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule, HttpClient } from '@angular/common/http';
 import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
@@ -12,6 +12,7 @@ import { AddProductComponent } from './pages/products/add-product/add-product.co
 import { NgxSpinnerModule } from "ngx-spinner";
 import { CategoriesProductComponent } from './pages/categories-product/categories-product.component';
 import { ProductDetailsComponent } from './pages/product-details/product-details.component';
+import { HomeComponent } from './pages/home/home.component';
 
 export function HttpLoaderFactory(http: HttpClient) {
     return new TranslateHttpLoader(http);
@@ -23,7 +24,8 @@ export function HttpLoaderFactory(http: HttpClient) {
         ProductsComponent,
         AddProductComponent,
         CategoriesProductComponent,
-        ProductDetailsComponent
+        ProductDetailsComponent,
+        HomeComponent
     ],
     imports: [
         AppRoutingModule,

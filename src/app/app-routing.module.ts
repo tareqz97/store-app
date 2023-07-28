@@ -3,7 +3,18 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule, PreloadAllModules } from '@angular/router';
 import { ProductsComponent } from './pages/products/products.component';
 import { CategoriesProductComponent } from './pages/categories-product/categories-product.component';
+import { AccessGuard } from './shared/services/auth.guard';
+import { HomeComponent } from './pages/home/home.component';
 const routes: Routes = [
+    {
+        path: '',
+        redirectTo: 'home',
+        pathMatch: 'full'
+    },
+    {
+        path: 'home',
+        component: HomeComponent
+    },
     {
         path: 'auth',
         loadChildren: () =>
@@ -13,16 +24,20 @@ const routes: Routes = [
     },
     {
         path: 'products',
-        component: ProductsComponent
+        component: ProductsComponent,
+        canActivate: [AccessGuard], data: { role: 'admin' }
     },
     {
         path: 'categories-product',
-        component: CategoriesProductComponent
+        component: CategoriesProductComponent,
+        canActivate: [AccessGuard], data: { role: 'user' }
     },
     {
         path: 'product/:id',
-        component: ProductDetailsComponent
-    }
+        component: ProductDetailsComponent,
+        canActivate: [AccessGuard], data: { role: 'user' }
+    },
+    { path: '**', redirectTo: 'home', pathMatch: 'full' },
 ];
 
 @NgModule({

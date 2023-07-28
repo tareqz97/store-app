@@ -11,11 +11,9 @@ export class AppComponent {
     dir: any = 'ltr';
 
     constructor(private translate: TranslateService) {
-        translate.onLangChange.subscribe((x: string) => this.dir = x == "en" ? "ltr" : "rtl")
+        translate.onLangChange.subscribe(x => {
+            this.dir = x.lang == "en" ? "ltr" : "rtl"}
+        )
     }
 
-    ngOnInit(): void {
-        this.dir = localStorage.getItem('language') == "en" ? "ltr" : "rtl"
-        
-    }
 }

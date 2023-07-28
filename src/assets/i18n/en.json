@@ -22,5 +22,6 @@
     "RATING": "Rating",
     "PRODUCTS": "Products",
     "SELECT_A_CATEGORY": "Select a category",
-    "ALL": "All"
+    "ALL": "All Categories",
+    "LOGOUT": "Logout"
 }

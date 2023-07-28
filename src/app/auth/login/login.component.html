@@ -3,21 +3,21 @@
         <div class="title">
             {{"LOGIN" |translate}}
         </div>
-        <form>
+        <form [formGroup]="loginForm">
             <div class="input-container">
                 <mat-form-field>
                     <mat-label>{{"USER_NAME" |translate}}</mat-label>
-                    <input matInput>
+                    <input matInput formControlName="userName">
                 </mat-form-field>
             </div>
             <div class="input-container">
                 <mat-form-field>
                     <mat-label>{{"PASSWORD" |translate}}</mat-label>
-                    <input matInput type="password">
+                    <input matInput type="password" formControlName="password">
                 </mat-form-field>
             </div>
             <div class="submit">
-                <button mat-flat-button color="primary">{{"LOGIN" |translate}}</button>
+                <button mat-flat-button color="primary" (click)="login()">{{"LOGIN" |translate}}</button>
             </div>
             
         </form>

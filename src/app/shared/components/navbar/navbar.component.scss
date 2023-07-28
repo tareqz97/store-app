@@ -1,3 +1,14 @@
 .dropdown-menu {
     left: unset;
 }
+
+.logout {
+    a {
+        padding: 0 1rem;
+        cursor: pointer;
+    }
+}
+
+.nav-bar-actions {
+    justify-content: flex-end;
+}
