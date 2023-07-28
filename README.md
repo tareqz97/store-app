@@ -1,27 +1,58 @@
-# StoreApp
+# Angular App Ignore Rules
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.1.6.
+# Node.js artifacts
+node_modules/
 
-## Development server
+# Angular artifacts
+/dist/
+/dist-server/
+/tmp/
+/e2e/*.js
+/e2e/*.map
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+# Compiled TypeScript
+*.js
+*.js.map
 
-## Code scaffolding
+# Dependency lock files
+package-lock.json
+yarn.lock
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+# IDE/Editor-specific files
+.vscode/
+.idea/
+*.iml
+*.ipr
+*.iws
+*.editorconfig
 
-## Build
+# Build artifacts and caches
+/dist/
+/out-tsc/
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+# Test and coverage artifacts
+/coverage/
+/sonarqube/
 
-## Running unit tests
+# Miscellaneous
+*.log
+*.txt
+*.swp
+.DS_Store
+Thumbs.db
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+# Angular App Setup and Usage Instructions
 
-## Running end-to-end tests
+## Prerequisites
+- Node.js and npm installed (https://nodejs.org)
+- Angular CLI (https://cli.angular.io/)
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+## Setup
+1. Clone this repository to your local machine.
+2. Navigate to the project directory: `cd store-app`
+3. Install project dependencies: `npm install`
 
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+## Development Server
+To run the app locally, use the Angular CLI development server:
+ng serve
+This will launch the app at `http://localhost:4200/`.
