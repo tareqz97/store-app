@@ -1,0 +1,23 @@
+{
+    "USER_NAME": "اسم المستخدم",
+    "PASSWORD": "كلمة السر",
+    "LOGIN": "تسجيل الدخول",
+    "ADD_PRODUCT": "اضافة منتج",
+    "TITLE": "العنوان",
+    "PRICE": "السعر",
+    "CATEGORY": "الفئة",
+    "EDIT_PRODUCT": "تعديل المنتج",
+    "ELECTRONICS": "الكترونيات",
+    "JEWELERY": "مجوهرات",
+    "MEN'S_CLOTHING": "ملابس رجالية",
+    "WOMEN'S_CLOTHING": "ملابس نسائية",
+    "DESCRIPTION": "الوصف",
+    "YOUR_CHANGES_HAVE_BEEN_SAVED_SUCCESSFULLY": "تم حفظ التغييرات الخاصة بك بنجاح",
+    "EDIT": "تعديل",
+    "DELETE": "حذف",
+    "SAVE": "حفظ المتغيرات",
+    "CANCEL": "الغاء",
+    "PRODUCTS_LIST": "قائمة المنتجات",
+    "NO.": ".الرقم",
+    "RATING": "التقييم"
+}

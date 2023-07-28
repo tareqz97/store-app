@@ -1,0 +1,16 @@
+.table-container {
+    margin-top: 3rem;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 0.5rem 2rem 0.5rem;
+}
+
+.product-list-header {
+    display: flex;
+    align-items: baseline;
+    height: 3.2rem;
+    .title {
+        flex: 1;
+    }
+}

@@ -1,0 +1,41 @@
+<div class="container">
+    <div class="products-header">
+        <div class="title">
+            <h2>{{"PRODUCTS" |translate}}</h2>
+        </div>
+        <div class="filter">
+            <form [formGroup]="categoryForm">
+                <mat-form-field>
+                    <mat-label>{{"SELECT_A_CATEGORY" |translate}}</mat-label>
+                    <mat-select disableRipple formControlName="category" (ngModelChange)="changeCategory($event)">
+                        <mat-option value="all">{{"ALL" |translate}}</mat-option>
+                        <mat-option value="electronics">{{"ELECTRONICS" |translate}}</mat-option>
+                        <mat-option value="jewelery">{{"JEWELERY" |translate}}</mat-option>
+                        <mat-option value="men's clothing">{{"MEN'S_CLOTHING" |translate}}</mat-option>
+                        <mat-option value="women's clothing">{{"WOMEN'S_CLOTHING" |translate}}</mat-option>
+                    </mat-select>
+                  </mat-form-field>
+            </form>
+            
+        </div>
+    </div>
+    <div class="row mt-4">
+        <div class="col-md-6 col-12" *ngFor="let item of productsList">
+            <div class="card mb-3" routerLink="/product/{{item?.id}}">
+                <div class="row g-0">
+                  <div class="col-md-4 col-12">
+                    <img src="{{item.image}}" class="img-fluid rounded-start" alt="...">
+                  </div>
+                  <div class="col-md-8">
+                    <div class="card-body">
+                      <h3 class="card-title">{{item.title}}</h3>
+                      <p class="card-text"><small class="text-muted">{{item.category}}</small></p>
+                      <p class="card-text card-description">{{item.description}}</p>
+                      <p class="card-text"><small class="text-muted">{{item.price}} JOD</small></p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,33 @@
+.login-container {
+    width: 100%;
+    height: 92vh;
+    min-height: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .login-box {
+        height: calc(100vh - 30rem);
+        min-height: 28rem;
+        display: block;
+        overflow: auto;
+        // border: 1px solid;
+        box-shadow: 4px 4px 10px rgba(0, 10, 32, 0.12);
+        width: 25rem;
+        .title {
+            background: #f4f4f4;
+            border-bottom: 1px solid #e0e0e0;
+            padding: 1.6rem 2rem;
+            font-size: 1.5rem;
+        }
+    }
+}
+form {
+    padding-top: 3rem;
+    .submit {
+        margin-top: 1rem;
+        padding: 0 2rem;
+    }
+    .input-container {
+        padding: 0 2rem;
+    }
+}

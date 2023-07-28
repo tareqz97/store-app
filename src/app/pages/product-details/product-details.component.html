@@ -1,0 +1,27 @@
+<div class="container">
+    <nav aria-label="breadcrumb" class="mt-5">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a routerLink="/categories-product">{{"PRODUCTS" |translate}}</a></li>
+          <li class="breadcrumb-item active" aria-current="page">{{product?.title}}</li>
+        </ol>
+      </nav>
+    <div class="row">
+        <div class="col-12">
+            <div class="card mb-3" *ngIf="product">
+                <div class="row g-0">
+                  <div class="col-md-4 col-12">
+                    <img src="{{product.image}}" class="img-fluid rounded-start" alt="...">
+                  </div>
+                  <div class="col-md-8">
+                    <div class="card-body">
+                      <h3 class="card-title">{{product.title}}</h3>
+                      <p class="card-text"><small class="text-muted">{{product.category}}</small></p>
+                      <p class="card-text card-description">{{product.description}}</p>
+                      <p class="card-text"><small class="text-muted">{{product.price}} JOD</small></p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+        </div>
+    </div>
+</div>

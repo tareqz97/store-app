@@ -1,0 +1,52 @@
+<div class="dialog-header">
+    <div class="dialog-title">
+        {{(data.mode == 'add' ? "ADD_PRODUCT" : "EDIT_PRODUCT") |translate}}
+    </div>
+</div>
+<div class="container-fluid">
+    <form [formGroup]="productForm">
+        <div class="row">
+            <div class="col-12">
+                <mat-form-field>
+                    <mat-label>{{"TITLE" |translate}}</mat-label>
+                    <input matInput formControlName="title">
+                  </mat-form-field>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6 col-12">
+                <mat-form-field>
+                    <mat-label>{{"PRICE" |translate}}</mat-label>
+                    <input matInput type="number" formControlName="price">
+                  </mat-form-field>
+            </div>
+            <div class="col-md-6 col-12">
+                <mat-form-field>
+                    <mat-label>{{"CATEGORY" |translate}}</mat-label>
+                    <mat-select formControlName="category">
+                      <mat-option value="electronics">{{"ELECTRONICS" |translate}}</mat-option>
+                      <mat-option value="jewelery">{{"JEWELERY" |translate}}</mat-option>
+                      <mat-option value="men's clothing">{{"MEN'S_CLOTHING" |translate}}</mat-option>
+                      <mat-option value="women's clothing">{{"WOMEN'S_CLOTHING" |translate}}</mat-option>
+                    </mat-select>
+                  </mat-form-field>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <mat-form-field>
+                    <mat-label>{{"DESCRIPTION" |translate}}</mat-label>
+                    <textarea matInput formControlName="description"></textarea>
+                  </mat-form-field>
+            </div>
+        </div>
+        <div class="row form-actions mt-2 mb-4">
+            <div class="col-md-6 col-12">
+                <button mat-flat-button color="primary" (click)="saveChanges()">{{"SAVE" |translate}}</button>
+            </div>
+            <div class="col-md-6 col-12">
+                <button mat-flat-button color="warn" (click)="close()">{{"CANCEL" |translate}}</button>
+            </div>
+        </div>
+    </form>
+</div>
